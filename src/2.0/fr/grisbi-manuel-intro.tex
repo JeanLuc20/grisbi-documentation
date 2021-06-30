@@ -5,6 +5,7 @@
 % $Id : grisbi-manuel-intro.tex, v 0.6.0 2011/11/17 Jean-Luc Duflot
 % $Id : grisbi-manuel-intro.tex, v 0.8.9 2012/04/27 Jean-Luc Duflot
 % $Id : grisbi-manuel-intro.tex, v 1.0 2014/02/12 Jean-Luc Duflot
+% $Id : grisbi-manuel-intro.tex, v 2.0 2021/mm/dd Jean-Luc Duflot
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \chapter{Introduction\label{introduction}}
@@ -21,57 +22,53 @@ Grisbi a pris le parti de la simplicité et de l'efficacité pour un usage de
 base, sans toutefois exclure la sophistication nécessaire à un usage plus avancé. Les fonctionnalités futures tenteront toujours de respecter ces critères.
 
 
-\section{Fonctionnalités\label{introduction-features}}
+\section{Fonctionnalités\label{introduction ;-features}}
 
 
 \subsection{Ce que Grisbi sait faire}
 
 \begin{itemize}
-	\item Logiciel développé par des Français, donc en totale conformité avec la logique française de la comptabilité
-	\item Interface simple et intuitive, avec commande d'affichage plein écran
-	\item Gestion multi-comptes et multi-utilisateurs
-	\item Gestion des paramètres locaux (dates, séparateurs décimal et des milliers)	
-	\item Comptes bancaires, de caisse, d'actif et de passif
-	\item Gestion multi-devises, avec prise en charge des taux de change et des frais de change
-	\item Gestion des cartes bancaires (débit immédiat ou différé)	
-	\item Description des opérations avec : date, date de valeur, exercice, tiers,
-	montant, devise, catégorie et sous-catégorie, imputation et sous-imputation
-	budgétaires (permettant de tenir une comptabilité analytique), remarque, numéro d'écriture (attribué par Grisbi), numéro de pièce
-	comptable, références bancaires
-	\item Auto-complètement des tiers, catégories et imputations budgétaires avec rappel automatique des  opérations et des sous-opérations pour un tiers donné
-	\item Option d'effacement des champs Crédit et Débit pour l'auto-complètement
-	\item Calcul du solde en fonction de la date de l'opération ou de sa date de valeur
-	\item Virement entre comptes, y compris de devises différentes, avec contre-écriture automatique
-	\item Planification d'opérations avec validation automatique ou manuelle
-	\item Surveillance des échéances
-	\item Déplacement et clonage des opérations
-	\item Clonage des opérations planifiées
-	\item Colorisation des débits dans l'échancier
-	\item Analyse et rapports financiers grâce au puissant module de génération
-	d'états
-	\item Plusieurs états pré-formatés disponibles et personnalisables
-	\item Tiers virtuels créés par les états
-	\item Impression des états
-	\item Simulation de crédits et tableaux d'amortissement avec impression et export des données
-	\item Budget prévisionnel avec graphiques sur les prévisions et les données historiques
-	\item Gestion des cartes bancaires (débit immédiat ou différé)
-	\item Comptabilité d'association avec plan comptable
-	\item Ordre d'affichage des comptes par glisser/déposer dans la liste des comptes
-	\item Import de fichiers aux formats \gls{QIF}, \gls{OFX}, \gls{Gnucash} ou \gls{CSV}
-	\item Import de fichiers de catégories dans les imputations budgétaires
-	\item Export de fichiers aux formats \gls{QIF} ou \gls{CSV}
-	\item Icônes personnalisées dans le fichier de comptes
-	\item Icône de Grisbi au format \indexword{\gls{SVG}}\index{svg}
-	\item Encore plus de menus contextuels sur le bouton droit de la souris (panneau de navigation)
-	\item Nombreux raccourcis-clavier pour une bonne ergonomie
+	\item Logiciel développé par des Français, donc en totale conformité avec la logique de la comptabilité française ;
+	\item Interface simple et intuitive, avec commande d'affichage plein écran ;
+	\item Gestion multi-comptes et multi-utilisateurs ;
+	\item Gestion des paramètres locaux (dates, séparateurs décimal et des milliers) ;	
+	\item Comptes bancaires, de caisse, d'actif et de passif ;
+	\item Gestion multi-devises, avec prise en charge des taux de change et des frais de change ;
+	\item Gestion des cartes bancaires (débit immédiat ou différé) ;	
+	\item Description des opérations avec : date, date de valeur, exercice, tiers, montant, devise, catégorie et sous-catégorie, imputation et sous-imputation budgétaires (permettant de tenir une comptabilité analytique), remarque, numéro d'écriture (attribué par Grisbi), numéro de pièce comptable, références bancaires ;
+	\item Auto-complètement des tiers, catégories et imputations budgétaires avec rappel automatique des  opérations et des sous-opérations pour un tiers donné ;
+	\item Option d'effacement des champs Crédit et Débit pour l'auto-complètement ;
+	\item Calcul du solde en fonction de la date de l'opération ou de sa date de valeur ;
+	\item Virement entre comptes, y compris de devises différentes, avec contre-écriture automatique ;
+	\item Planification d'opérations avec validation automatique ou manuelle ;
+	\item Surveillance des échéances ;
+	\item Déplacement et clonage des opérations ;
+	\item Clonage des opérations planifiées ;
+	\item Colorisation des débits dans l'échancier ;
+	\item Analyse et rapports financiers grâce au puissant module de génération d'états ;
+	\item Plusieurs états pré-formatés disponibles et personnalisables ;
+	\item Tiers virtuels créés par les états ;
+	\item Impression des états ;
+	\item Simulation de crédits et tableaux d'amortissement avec impression et export des données ;
+	\item Budget prévisionnel avec graphiques sur les prévisions et les données historiques ;
+	\item Gestion des cartes bancaires (débit immédiat ou différé) ;
+	\item Comptabilité d'association avec plan comptable ;
+	\item Ordre d'affichage des comptes par glisser/déposer dans la liste des comptes ;
+	\item Import de fichiers aux formats \gls{QIF}, \gls{OFX}, \gls{Gnucash} ou \gls{CSV} ;
+	\item Import de fichiers de catégories dans les imputations budgétaires ;
+	\item Export de fichiers aux formats \gls{QIF} ou \gls{CSV} ;
+	\item Icônes personnalisées dans le fichier de comptes ;
+	\item Icône de Grisbi au format \indexword{\gls{SVG}}\index{svg} ;
+	\item Encore plus de menus contextuels sur le bouton droit de la souris (panneau de navigation) ;
+	\item Nombreux raccourcis-clavier pour une bonne ergonomie.
 \end{itemize}
 
 
 \subsection{Ce que Grisbi ne sait pas encore faire}
 
 \begin{itemize}
-	\item La ventilation automatique des remboursements d'emprunt
-	\item Le rapprochement par Internet
+	\item La ventilation automatique des remboursements d'emprunt ; *******C'EST BIEN ÇA QUI EST EN COURS ?******
+	\item Le rapprochement par Internet.
 \end{itemize}
 
 
@@ -103,13 +100,13 @@ Notez qu'à partir de la version 0.6, les versions de numéro mineur pair (par e
 \subsection{Nouveautés de la version 0.6, depuis la version 0.4.5}
 
 \begin{itemize}
-	\item Refonte de l'interface graphique
-	\item Support de la bibliothèque GTK+2 pour un environnement plus sympathique et un portage simplifié sous Windows
-	\item Plus aucune dépendance vis-à-vis de Gnome
-	\item Version Windows native (merci à François Terrot)
-	\item Support \gls{UTF-8} natif
-	\item Impression des états par \gls{LaTeX}
-	\item Export des états en \gls{HTML}
+	\item Refonte de l'interface graphique ;
+	\item Support de la bibliothèque GTK+2 pour un environnement plus sympathique et un portage simplifié sous Windows ;
+	\item Plus aucune dépendance vis-à-vis de Gnome ;
+	\item Version Windows native (merci à François Terrot) ;
+	\item Support \gls{UTF-8} natif ;
+	\item Impression des états par \gls{LaTeX} ;
+	\item Export des états en \gls{HTML} ;
 	\item Amélioration de l'interface utilisateur :
 		\begin{itemize}
 		\item amélioration des messages, les utilisateurs peuvent en ignorer,
@@ -118,41 +115,41 @@ Notez qu'à partir de la version 0.6, les versions de numéro mineur pair (par e
 		\item menu contextuel sur la liste des opérations,
 		\item amélioration des items ;
 		\end{itemize}
-	\item Listes de comptes et d'états complètement cliquables
-	\item Configuration globale en \gls{XML} (merci à Axel Rousseau)
+	\item Listes de comptes et d'états complètement cliquables ;
+	\item Configuration globale en \gls{XML} (merci à Axel Rousseau) ;
 	\item Réécriture de l'import de fichiers :
 		\begin{itemize}
 		\item support des formats \gls{QIF}, \gls{OFX}, \gls{Gnucash} ou \gls{CSV},
 		\item import incrémental,
 		\item rapprochement automatique ;
 		\end{itemize}
-	\item Début de la traduction italienne par Giorgio Mandolfo
+	\item Début de la traduction italienne par Giorgio Mandolfo ;
 	\item Taux de change cachés sur une session pour éviter de les
-	ressaisir
-	\item Support des attributs de texte (gras, italique, grand, petit) pour les états
-	\item Nouveau logo avec la mascotte Grisbi sur un signe euro (merci à André Pascual)
-	\item Logo d'attente animé modifiable
-	\item Complètement des listes sensible à la casse des caractères
-	\item Amélioration de la saisie des détails des banques
-	\item Support du clavier dans les arbres des tiers, catégories et imputations
-	budgétaires
-	\item Échéances automatiques à terme cliquables
-	\item Échéances ventilables
-	\item Opérations convertibles en échéances
-	\item Opérations déplaçables dans un autre compte
+	ressaisir ;
+	\item Support des attributs de texte (gras, italique, grand, petit) pour les états ;
+	\item Nouveau logo avec la mascotte Grisbi sur un signe euro (merci à André Pascual) ;
+	\item Logo d'attente animé modifiable ;
+	\item Complètement des listes sensible à la casse des caractères ;
+	\item Amélioration de la saisie des détails des banques ;
+	\item Support du clavier dans les arbres des tiers, catégories et imputations 
+budgétaires ;
+	\item Échéances automatiques à terme cliquables ;
+	\item Échéances ventilables ;
+	\item Opérations convertibles en échéances ;
+	\item Opérations déplaçables dans un autre compte.
 \end{itemize}
 
 
 \subsection{Nouveautés de la version 0.8}
 
 \begin{itemize}
-	\item Module budgétaire dans la version de base
-	\item Simulateur de crédits et tableaux d'amortissement avec possibilité d'imprimer et d'exporter les données dans un tableur
-	\item Tableau d'amortissement pour les comptes de passif avec possibilité d'imprimer et d'exporter les données dans un tableur
-	\item Gestion des paramètres locaux (format des dates, séparateurs décimal et des milliers)
-	\item Incorporation des icônes personnalisées dans le fichier de comptes
-	\item Colorisation des débits dans l'échéancier
-	\item Clonage des opérations planifiées
+	\item Module budgétaire dans la version de base ;
+	\item Simulateur de crédits et tableaux d'amortissement avec possibilité d'imprimer et d'exporter les données dans un tableur ;
+	\item Tableau d'amortissement pour les comptes de passif avec possibilité d'imprimer et d'exporter les données dans un tableur ;
+	\item Gestion des paramètres locaux (format des dates, séparateurs décimal et des milliers) ;
+	\item Incorporation des icônes personnalisées dans le fichier de comptes ;
+	\item Colorisation des débits dans l'échéancier ;
+	\item Clonage des opérations planifiées.
 \end{itemize}
 
 % saut de page pour titre solidaire
@@ -164,19 +161,19 @@ Notez qu'à partir de la version 0.6, les versions de numéro mineur pair (par e
 
 
 \begin{itemize}
-	\item Graphiques sur les prévisions
-	\item Gestion des cartes bancaires (débit immédiat ou différé)
-	\item Comptabilité d'association avec plan comptable
-	\item Icône de Grisbi au format \indexword{\gls{SVG}}\index{svg}
-	\item Encore plus de menus contextuels sur le bouton droit de la souris
-	\item Import de fichiers de catégories dans les imputations budgétaires
-	\item Modification de l'ordre d'affichage des comptes par glisser/déposer dans la liste des comptes
-	\item Calcul du solde en fonction de la date de l'opération ou de sa date de valeur
-	\item Option d'effacement des champs Crédit et Débit pour l'auto-complètement
-	\item Affichage des tiers inutilisés	
-	\item Commande d'affichage plein écran par la touche de fonction \key{F11}
-	\item Raccourci-clavier \key{Ctrl}\key{T} pour l'appel d'une nouvelle opération
-	\item Accès direct au manuel de l'utilisateur par le menu \menu{Aide} ou le raccourci-clavier \key{Ctrl}\key{H}
+	\item Graphiques sur les prévisions ;
+	\item Gestion des cartes bancaires (débit immédiat ou différé) ;
+	\item Comptabilité d'association avec plan comptable ;
+	\item Icône de Grisbi au format \indexword{\gls{SVG}}\index{svg} ;
+	\item Encore plus de menus contextuels sur le bouton droit de la souris ;
+	\item Import de fichiers de catégories dans les imputations budgétaires ;
+	\item Modification de l'ordre d'affichage des comptes par glisser/déposer dans la liste des comptes ;
+	\item Calcul du solde en fonction de la date de l'opération ou de sa date de valeur ;
+	\item Option d'effacement des champs Crédit et Débit pour l'auto-complètement ;
+	\item Affichage des tiers inutilisés ;
+	\item Commande d'affichage plein écran par la touche de fonction \key{F11} ;
+	\item Raccourci-clavier \key{Ctrl}\key{T} pour l'appel d'une nouvelle opération ;
+	\item Accès direct au manuel de l'utilisateur par le menu \menu{Aide} ou le raccourci-clavier \key{Ctrl}\key{H}.
 \end{itemize}
 
 
@@ -184,14 +181,26 @@ Notez qu'à partir de la version 0.6, les versions de numéro mineur pair (par e
 
 \begin{itemize}
 
-	\item Ajout d'un module de recherche dans la liste des opérations accessibles, dans le menu popup des opérations (clic droit sur une opération) 
-
+	\item Ajout d'une page d'entrée dans Grisbi, pour un accès direct aux fichiers de comptes ou aux divers assistants de création  ou d'importation de comptes ;
+	\item Ajout d'un module de recherche dans le menu contextuel de la liste des opérations ;
+	\item Ajout d'un accès direct à la fenêtre de création/modification des états, dans le \menu{Éditer}  ;
+	\item Ajout de la possibilité de supprimer automatiquement les anciennes sauvegardes ;
+	\item Intégration automatique des thèmes sombres ;
+	\item Nouvelle gestion des couleurs de Grisbi ;
+	\item Ajout de la possibilité de changer la taille des polices de caractères de manière globale ;
+	\item Amélioration de l'utilisation de Grisbi avec des écrans de faible définition ;
+	\item Refonte du module de gestion des crédits ;
+; À PRÉCISER UNE FOIS COMPRISE LA FONCTIONNALITÉ ;
+	\item Ajout de règles d'importation pour les fichiers CSV et QIF ;
+	\item La barre d'outils ne peut plus être déplacée (cette fonction était superflue) ;
+	\item Correction de bogues.
+	 
 \end{itemize}
 
 
 
 
-\subsection{Et pour le futur ?}
+\subsection{Et pour le futur ?} À VOIR APRÈS LA VERSION 2
 
 Les prochaines versions (non stable 1.1 et stable 1.2) utiliseront toujours la bibliothèque \gls{GTK} version~2.
 Les futures versions (non stable 1.3 et stable 1.4) bénéficieront de la nouvelle  bibliothèque GTK version~3.
@@ -226,8 +235,7 @@ N'hésitez pas de toute façon à consulter régulièrement le site officiel de 
 
 {Cédric \familyname{Auger}}\footnote{\urlCedricAugerEmail{}} est à la base du projet, et il continue à en être développeur.
 
-{Daniel \familyname{Cartron}}\footnote{\urlDanielCartronEmail{}} a rédigé la documentation jusqu'à la version 0.4.0, fourni des conseils en comptabilité
-et en ergonomie, et créé le premier site de Grisbi. Sa passion des fichiers de
+{Daniel \familyname{Cartron}}\footnote{\urlDanielCartronEmail{}} a rédigé la documentation jusqu'à la version 0.4.0, fourni des conseils en comptabilité et en ergonomie, et créé le premier site de Grisbi. Sa passion des fichiers de
 comptes ultracompliqués amène un plus indéniable à la découverte de bogues inédits.
 
 {André \familyname{Pascual}}\footnote{\urlAndrePascualEmail{}}, de
@@ -241,26 +249,24 @@ comptes ultracompliqués amène un plus indéniable à la découverte de bogues 
 
 {Loic \familyname{Breilloux}\footnote{\urlLoicBreillouxEmail{}}} a mis à jour la documentation pour la version 0.5.1 et va tâcher de faire les mises à jour de la documentation pour les versions futures.
 
-{Gérald \familyname{Niel}}\footnote{\urlGeraldNielEmail{}} a remplacé
-{Daniel \familyname{Cartron}} dans le rôle de webmestre et est donc le créateur de la nouvelle version du site de \lang{Grisbi}\footnote{\urlGrisbi{}}. Il est
+{Gérald \familyname{Niel}}\footnote{\urlGeraldNielEmail{}} a remplacé {Daniel \familyname{Cartron}} dans le rôle de webmestre et est donc le créateur de la nouvelle version du site de \lang{Grisbi}\footnote{\urlGrisbi{}}. Il est
 également responsable des paquets \gls{Slackware}.
 
-{Juliette \familyname{Martin}}\footnote{\urlJulietteEmail{}} assure la tâche
-ingrate de relecture de la documentation. S'il reste des erreurs, c'est
-certainement qu'elles étaient bien cachées pour avoir échappé à ses yeux
-attentifs.
+{Juliette \familyname{Martin}}\footnote{\urlJulietteEmail{}} assure la tâche ingrate de relecture de la documentation. S'il reste des erreurs, c'est certainement qu'elles étaient bien cachées pour avoir échappé à ses yeux attentifs.
 
 {François \familyname{Terrot}}\footnote{\urlFrancoisTerrotEmail{}} a rejoint l'équipe afin d'assurer le \gls{portage} de Grisbi sous Windows.
 
-{Pierre \familyname{Biava}}\footnote{\urlPierreBiavaEmail{}} a rejoint l'équipe de développement en 2008.
+{Pierre \familyname{Biava}}\footnote{\urlPierreBiavaEmail{}} a rejoint l'équipe de développement en 2008 et continue depuis à assurer l'évolution de Grisbi avec de nouvelles et belles fonctionnalités.
 
 {Didier \familyname{Chevalier}}\footnote{\urlDidierChevalierEmail{}},  {William \familyname{Ollivier}}\footnote{\urlWilliamOllivierEmail{}} et {Mickaël \familyname{Remars}}\footnote{\urlMickaelRemarsEmail{}} ont eux aussi participé au développement.
 
-{Jean-Luc \familyname{Duflot}}\footnote{\urlJeanLucDuflotEmail{}} a réalisé pour la version 0.6 une grosse mise à jour du manuel, qui en avait bien besoin depuis 2004, et a continué sur la 0.8 et la 1.0.
+{Jean-Luc \familyname{Duflot}}\footnote{\urlJeanLucDuflotEmail{}} a réalisé pour la version 0.6 une grosse mise à jour du manuel de l'utilisateur, qui en avait bien besoin depuis 2004, et a continué sur la 0.8, la 1.0, puis la 2.0.
 
-{Alain \familyname{Letient}}\footnote{\urlAlainLetientEmail{}} a effectué avec ténacité la relecture du manuel 0.6 et a réalisé son iconographie, et a aussi continué sur les versions 0.8 et 1.0.
+{Alain \familyname{Letient}}\footnote{\urlAlainLetientEmail{}} a effectué avec ténacité la relecture du manuel 0.6 et a réalisé son iconographie, puis a aussi continué sur les versions 0.8, 1.0. et 2.0.
 
-{Guy \familyname{Lebègue}}\footnote{\urlGuyLebegueEmail{}}, d'abord pour la version 0.8, puis avec {Michèle \familyname{Bondil}}\footnote{\urlMicheleBondilEmail{}} pour la 1.0, ont réalisé la partie Comptabilité d'association, qui nécessite bien des compétences de spécialiste en comptabilité.
+{Guy \familyname{Lebègue}}\footnote{\urlGuyLebegueEmail{}}, d'abord pour la version 0.8, puis avec {Michèle \familyname{Bondil}}\footnote{\urlMicheleBondilEmail{}} pour la 1.0, ont complété le chapitre Comptabilité d'association, pour les petites entreprises et avec Plan Comptable, ce qui nécessite bien des compétences de spécialiste en comptabilité.
+
+Ludovic Rousseau ÀÀÀÀ AJOUTER *******************************************
 
 
 \section{Remerciements\label{introduction-thanks}}
@@ -276,21 +282,19 @@ Un grand merci également à tous les contributeurs de la liste de développemen
 \section{Licences\label{introduction-licenses}}
 
 
-Le programme est soumis aux termes de la \gls{Licence Publique Generale GNU}
-(en anglais : \gls{GNU General Public License}). Les corrections de bogues et mises à jour ne sont pas garanties.
+Le programme est soumis aux termes de la \gls{Licence Publique Generale GNU} (en anglais : \gls{GNU General Public License}). Les corrections de bogues et mises à jour ne sont pas garanties.
 
-Le manuel est soumis aux termes de la \gls{Licence de Documentation Libre GNU} (en anglais : \gls{GNU Free Documentation License}).
+Le Manuel de l'Utilisateur est soumis aux termes de la \gls{Licence de Documentation Libre GNU} (en anglais : \gls{GNU Free Documentation License}).
 
-Permission est accordée de copier, distribuer et/ou modifier ce document
-selon les termes de la Licence de Documentation Libre GNU version 1.1 ou toute version ultérieure publiée par la \gls{Free Software Foundation}.
+Permission est accordée de copier, distribuer et/ou modifier ce document selon les termes de la Licence de Documentation Libre GNU version 1.1 ou toute version ultérieure publiée par la \gls{Free Software Foundation}.
 
 
 \section{À propos du présent manuel\label{introduction-manual}}
 
 
-Vous avez sous les yeux la version \actuality{}1.0 du manuel, en date du \actuality{} 12 février 2014, qui correspond à la version 1.0 du logiciel Grisbi. 
+Vous avez sous les yeux la version \actuality{}2.0 du manuel, ******************en date du \actuality{} 12 février 2014****************, qui correspond à la version 2.0 ***************** du logiciel Grisbi. 
 
-Ce manuel a été écrit avec le \gls{formateur de texte} \gls{LaTeX}\index{latex@\LaTeX}, et il est disponible sous le \gls{format de fichier} PDF ou HTML, avec ou sans illustrations (copies d'écran) dans ces deux formats. 
+Ce manuel a été écrit avec le \gls{formateur de texte} \gls{LaTeX}\index{latex@\LaTeX}, et il est disponible sous le \gls{formats de fichier} PDF et HTML, avec ou sans illustrations (copies d'écran) dans les deux cas. 
 
 Il est accessible directement dans le logiciel Grisbi par le menu \menu{Aide - Manuel} de la barre de menus, sous le format HTML et avec illustrations.
 
@@ -307,7 +311,7 @@ Bien que le logiciel Grisbi soit conçu pour être le plus intuitif possible et 
 	\item le plus exhaustif possible, donc description de toutes les fonctionnalités ;
 	\item chapitres organisés suivant une trame la plus identique possible : présentation du chapitre - description de l'affichage, description des fonctions, pour faciliter le repérage dans le document ;
 	\item rédaction des paragraphes récurrents d'un chapitre à l'autre d'une manière la plus identique possible, pour faciliter la lecture rapide ;
-	\item recherche d'information facilitée grâce aux nombreux \gls{liens hypertexte}, à un index et à un glossaire.
+	\item recherche d'information facilitée grâce aux nombreux \gls{liens hypertexte}, et à une table des matières, une table des figures, un index et un glossaire.
 \end{itemize}
 
 % espace pour changement de thème : 5 mm
@@ -316,10 +320,11 @@ Voici une description succincte des différents chapitres :
 
 \begin{itemize}
 	\item \menu{Préambule} explique l'origine du nom donné à ce logiciel ;
-	\item \menu{Introduction} présente le logiciel, le manuel, leurs auteurs et les contacts ;
-	\item \menu{Premier démarrage de Grisbi} est le chapitre \emph{indispensable} pour commencer l'utilisation du logiciel ;
-	\item \menu{Accueil} décrit les éléments principaux de l'interface graphique et leur manipulation à la souris et au clavier (raccourcis) ;
+	\item \menu{Introduction} présente le logiciel et ses évolutions, le manuel, leurs licences, auteurs et contacts ;
+	\item \menu{Entrée dans Grisbi}	permet un accès direct aux fichiers de comptes ou aux divers assistants de création  ou d'importation de comptes ;
+	\item \menu{Nouveau fichier de comptes} est le chapitre \emph{indispensable} pour commencer l'utilisation du logiciel ;
 	\item \menu{Export et Import de comptes} décrit comment échanger des données avec les autres logiciels ;
+	\item \menu{Accueil} décrit les éléments principaux de l'interface graphique et leur manipulation à la souris et au clavier (raccourcis) ;
 	\item \menu{Gestion des données} présente les options des fichiers de comptes, les sauvegardes et les archives ainsi que leur gestion ;
 	\item \menu{Gestion des comptes} décrit les propriétés des comptes, leur gestion et les différents types de comptes avec leur utilisation ;
 	\item \menu{Opérations d'un compte} décrit les manipulations sur les opérations, les champs d'information et de saisie utilisés et leur gestion, la création d'opérations et leur gestion ;
@@ -330,7 +335,7 @@ Voici une description succincte des différents chapitres :
 	\item \menu{Simulation de crédit} décrit les méthodes et la gestion de simulations ;
 	\item \menu{Budgets prévisionnels} décrit les outils et les procédures de création de budget et de tableaux d'amortissement, ainsi que leur gestion ;
 	\item \menu{Gestion des cartes bancaires et leurs prévisions} décrit la gestion de ces cartes, notamment celles à débit différé, et les méthodes de prévision ;	
-	\item \menu{Comptabilité d'association} présente deux introductions pour les trésoriers d'association ;
+	\item \menu{Comptabilité d'association} présente deux introductions pour les trésoriers de petites associations, et la comptabilité d'association et de petite entreprise avec Plan Comptable ;
 	\item \menu{États} et \menu{Création d'un état} décrivent la gestion et la création des états ;
 	\item \menu{Configuration de Grisbi} détaille toutes les possibilités de réglage du logiciel ;
 	\item \menu{Outils de maintenance} donne quelques clés à utiliser en cas d'erreurs ou de bogues.

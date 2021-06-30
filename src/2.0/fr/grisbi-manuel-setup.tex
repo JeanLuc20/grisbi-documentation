@@ -10,7 +10,7 @@
 \chapter{Configuration de Grisbi\label{setup}}
 
 
-Pour avoir accès aux paramètres de configuration de Grisbi, cliquez sur le menu \menu{Edition - Préférences}. La fenêtre de configuration s'ouvre, en affichant le contenu du dernier onglet visité. Vous pouvez en changer la position, mais pas la taille. 
+Pour avoir accès aux paramètres de configuration de Grisbi, cliquez sur le menu \menu{Éditer - Préférences}. La fenêtre de configuration s'ouvre, en affichant le contenu du dernier onglet visité. Vous pouvez en changer la position, mais pas la taille. 
 
 Cette fenêtre se compose de deux panneaux verticaux : le panneau des onglets à gauche, et le panneau des réglages \ifIllustration à droite\refimage{setup-sections-img}.
 
@@ -53,7 +53,9 @@ Vous pouvez naviguer entre le panneau des onglets et les différentes options du
 \subparagraph{Fichier de configuration :\label{setup-conffile}}
 
 
-Grisbi dispose d'un fichier de configuration appelé grisbi.conf, qui se trouve dans l'arborescence du système d'exploitation ; ce chemin est indiqué automatiquement dans le menu \menu{Éditer -Préférences}, voir la section \vref{setup-general-various-preferences}, \menu{Paramètres Divers}.
+Grisbi dispose d'un fichier de configuration appelé grisbi.conf, qui se trouve dans l'arborescence du système d'exploitation ; ce chemin est indiqué automatiquement dans le menu \menu{Éditer - Préférences}, voir la section \vref{setup-general-various-general-preferences}, \menu{Paramètres des préférences}.
+
+%{Paramètres des préférences :\label{setup-general-various-general-preferences}}
 
 % espace pour changement de thème
 \vspacepdf{5mm}
@@ -63,7 +65,7 @@ Grisbi dispose d'un fichier de configuration appelé grisbi.conf, qui se trouve 
 % espace avant Attention ou Note  : 5 mm
 \vspacepdf{5mm}
 
-\textbf{Note} : à partir de la version 2.xx de Grisbi, la possibilité de configurer certains paramètres de Grisbi en utilisant dconf-editor (Gsettings) dans les systèmes avec GNU/Linux a été supprimée, car cela posait des problèmes avec d'autres systèmes d'exploitation.
+\textbf{Note} : à partir de la version 2.0 de Grisbi, la possibilité de configurer certains paramètres de Grisbi en utilisant dconf-editor (Gsettings) dans les systèmes avec GNU/Linux a été supprimée, car cela posait des problèmes avec d'autres systèmes d'exploitation.
 
 
 \section{Généralités\label{setup-general}}
@@ -305,12 +307,10 @@ La section \menu{Détails des associations} affiche un champ de saisie et une li
 % espace pour changement de thème
 \vspacepdf{5mm}
 
-Vous disposez aussi de deux boutons \menu{Ignorer la casse}, pour trouver une chaîne contenant à la fois des caractères majuscules et minuscules, et \menu{Utiliser les expressions régulières}.
+Vous disposez aussi de deux boutons \menu{Ignorer la \gls{casse}}, pour trouver une chaîne contenant à la fois des caractères majuscules et minuscules, et \menu{Utiliser les \gls{expressions regulieres}}.
 
 % espace pour changement de thème
 \vspacepdf{5mm}
-CASSE et expressions régulières : AJOUTER DANS L'INDEX ET DANS LE GLOSSAIRE
-
 
 
 \ifIllustration
@@ -374,58 +374,65 @@ Cet onglet permet de gérer plusieurs aspects de l'utilisation de Grisbi.
 
 \subparagraph{Navigateur Web :\label{setup-general-various-general-browser}}
 
-Cette section permet de définir le navigateur Web qui sera lancé par les différents choix du menu \menu{Aide}, et qui affichera directement les contenus au format \gls{HTML}. 
+Le menu \menu{Aide} de la barre de menus de Grisbi permet, entre autres, d'afficher directement :
 
-Le champ \indexword{navigateur Web}\index{navigateur Web} permet de spécifier ce programme. La commande \cmd{xdg-open}, présente par défaut et reconnue par tous les bons systèmes d'exploitation (!), lance votre navigateur par défaut.
+\begin{itemize}
+	\item le \menu{Manuel (de l’utilisateur de Grisbi)} ;
+	\item le document \menu{Démarrage rapide} ;
+	\item le \menu{Site Web de Grisbi} ;
+	\item le site \menu{Signaler une anomalie}.
+\end{itemize}
 
-Mais vous pouvez aussi saisir la commande qui lance un autre navigateur, par exemple \cmd{firefox} ou bien, si vous voulez un affichage ultra-rapide, un navigateur ultra-léger comme Dillo ou Midori (commande \cmd{dillo} ou \cmd{midori}), voir la section \vref{introduction-manual-readers}, \menu{Logiciels de lecture}. Le navigateur affiche alors la page HTML demandée dans le menu \menu{Aide} : soit le \menu{Manuel}, le document \menu{Démarrage rapide}, le \menu{Site Web de Grisbi} ou le site \menu{Signaler une anomalie}.
+Cette section permet de définir le navigateur Web qui sera lancé et qui affichera donc ces contenus au format \gls{HTML}. 
 
+Le champ \indexword{navigateur Web}\index{navigateur Web} permet de spécifier ce programme de deux manières : 
 
-\subparagraph{Affichage de l'aide :\label{setup-general-various-general-display}}
-
-Vous avez le choix d'afficher l'aide soit au format \gls{HTML}, grâce au navigateur défini ci-dessus, ou au format \gls{PDF}, grâce à votre lecteur PDF par défaut ; ceux-ci sont normalement définis dans la configuration de votre interface graphique (Windows, Mac OSX, ou bien pour les systèmes Linux : Gnome, KDE, XFCE, Enligthenment ou tout autre gestionnaire de fenêtres). 
+\begin{itemize}
+	\item par la commande \cmd{xdg-open}, présente par défaut, et reconnue par tous les bons systèmes d'exploitation (!), qui lance le navigateur par défaut de votre système d'exploitation ; ce navigateur est normalement défini dans la configuration de votre interface graphique (Windows, Mac OSX, ou bien pour les systèmes Linux : Gnome, KDE, XFCE, Enligthenment ou tout autre gestionnaire de fenêtres) ;
+	\item  par la commande qui lance un autre navigateur, par exemple \cmd{firefox} ou bien, si vous voulez un affichage ultra-rapide, un navigateur ultra-léger comme Dillo ou Midori (commande \cmd{dillo} ou \cmd{midori}), voir la section \vref{introduction-manual-readers}, \menu{Logiciels de lecture} ; vous devrez peut-être indiquer aussi le chemin d'accès complet à cette commande.
+\end{itemize}
 
 
 VÉRIFIER QUE NAVIGATEUR ET LECTEUR PDF SONT DANS LE GLOSSAIRE ET L'INDEX
 
 
-
-\ifIllustration
-% image entourée par un paragraphe ( picins)
-% pas de référence à l'illustration car erreur de numéro de figure avec picins.
-\pichskip{7mm}
-% supprimé car en html les figures entourées ne sont pas numérotées, et la numérotation des figures centrées décalée par rapport au pdf
-%\piccaption{Lancement de programmes}
-\label{setup-programs-img}
-\parpic[l]{\includegraphics[scale=0.5]{image/screenshot/setup_programs}}
-%\picskip{8} ne marche plus, superpose le texte et l'image
-% image entourée par un paragraphe ( picins)
-\fi
+%
+%\ifIllustration
+%% image entourée par un paragraphe ( picins)
+%% pas de référence à l'illustration car erreur de numéro de figure avec picins.
+%\pichskip{7mm}
+%% supprimé car en html les figures entourées ne sont pas numérotées, et la numérotation des figures centrées décalée par rapport au pdf
+%%\piccaption{Lancement de programmes}
+%\label{setup-programs-img}
+%\parpic[l]{\includegraphics[scale=0.5]{image/screenshot/setup_programs}}
+%%\picskip{8} ne marche plus, superpose le texte et l'image
+%% image entourée par un paragraphe ( picins)
+%\fi
 
 
 %\newlinepdf
 
 
-% espace avant Attention ou Note  : 10 mm
-%\vspacepdf{5mm}
-%\textbf{Note} : dans cette commande, vous devrez peut-être indiquer aussi le chemin d'accès complet à la commande.
+%\ifIllustration
+%% espace après image entourée
+%\vspacehevea{2mm}
+%\fi
 
-\ifIllustration
-% espace après image entourée
-\vspacehevea{2mm}
-\fi
+\newpage
 
-%\vspacepdf{5mm}
-%\textbf{Note} : cela peut fonctionner de saisir une commande pour lancer l'affichage du manuel en pdf, par ex. \cmd{evince chemin/grisbi-manuel-img-xxx.pdf} avec son chemin ; il se peut que cela affiche aussi une erreur peu importante, mais si vous préférez ce format \dots
+
 
 
 
 \subparagraph{Paramètres des préférences :\label{setup-general-various-general-preferences}}
 
-Cette section affiche le chemin complet du fichier de configuration de Grisbi dans votre système (voir le chapitre \vref{setup-conffile}, \menu{Fichier de configuration}).
+Cette section affiche le chemin complet du fichier de configuration de Grisbi (grisbi.conf) dans votre système (voir le chapitre \vref{setup-conffile}, \menu{Fichier de configuration}).
 
+METTRE GRISBI.CONF DANS L'INDEX
 
-Le bouton \menu{Réinitialisation de la fenêtre des préférences} permet de réinitialiser les dimensions de cette fenêtre en fonction de l'écran utilisé. À PRÉCISER
+Le bouton \menu{Réinitialisation de la fenêtre des préférences} permet de réinitialiser les dimensions de cette fenêtre à leur valeur par défaut. Cela est utile dans le cas de certaines tailles d'écran, ainsi que si vous avez modifié la taille de la police de caractères et que cela entre en conflit avec celle de la fenêtre.
+
+Dans le fichier de configuration grisbi.conf, on peut définir les dimensions par défaut de cette fenêtre : hauteur, largeur et largeur du panneau des onglets à gauche.
 
 
 \subsubsection{Échéancier\label{setup-general-various-planned}}
@@ -459,7 +466,7 @@ Vous devrez choisir entre l'une des deux options :
 	\vspacepdf{3mm}
 	
 	
-	\item \menu{Alerter/Exécuter les opérations planifiées du mois} : tous les messages relatifs aux  opérations à échoir durant le mois  apparaissent dès le 1\up{er} jour du mois ; mais vous pouvez modifier ce jour en sélectionnant \menu{Jour de lancement des opérations exécutées mensuellement} et en ajustant le jour du mois avec les boutons \menu{+} et \menu{-} ; cette option permet d'anticiper l'alerte et l'exécution des opérations planifiées du mois suivant ; par exemple, si l'opération planifiée se situe au mois de mai, vous pourrez anticiper l'alerte et l'exécution au 25 avril en choisissant « 25 » avec les boutons \menu{+} et \menu{-}.
+	\item \menu{Alerter/Exécuter les opérations planifiées du mois} : tous les messages relatifs aux  opérations à échoir durant le mois  apparaissent dès le 1\up{er} jour du mois ; mais vous pouvez modifier ce jour en sélectionnant \menu{Jour de lancement des opérations exNavigateur Web : écutées mensuellement} et en ajustant le jour du mois avec les boutons \menu{+} et \menu{-} ; cette option permet d'anticiper l'alerte et l'exécution des opérations planifiées du mois suivant ; par exemple, si l'opération planifiée se situe au mois de mai, vous pourrez anticiper l'alerte et l'exécution au 25 avril en choisissant « 25 » avec les boutons \menu{+} et \menu{-}.
 \end{itemize}
 
 % espace pour changement de thème
@@ -498,7 +505,15 @@ Vous pouvez aussi définir l’opération qui sera sélectionnée par défaut da
 \subsubsection{Paramètres régionaux\label{setup-general-various-regional}}
 
 
-\subparagraph{Choisir la langue :}\index{langue !séparateur}\label{setup-general-various-regional-langue} Choisissez dans la liste déroulante la langue que va utiliser Grisbi.
+\subparagraph{Choisir la langue :}\index{langue !séparateur}\label{setup-general-various-regional-langue} Choisissez dans la liste déroulante la langue que va utiliser Grisbi. Vous pouvez choisir :
+
+\begin{itemize}
+	\item \menu{Langue système} : c'est la langue configurée dans votre système d'exploitation ;
+	\item \menu{en\_US} : l'anglais des États-Unis ;
+	\item \menu{fr} : le français.
+\end{itemize}
+
+
 
 \subparagraph{Choisir le format de la date :}\index{date !séparateur}\index{séparateur !date}\index{date !format}\label{setup-general-localisation-date}
 
@@ -543,7 +558,8 @@ L'onglet \menu{Configuration de la page d'accueil} permet de configurer trois as
 
 \subparagraph{Pluriel de final :\label{setup-general-home-final}}
 
-Ce \indexword{pluriel du mot \og final \fg{}} \index{pluriel de final}apparaît notamment dans la page d'accueil. Vous pouvez choisir le pluriel de \og Solde final \fg{}, entre \menu{Soldes finals} (choix par défaut) et \menu{Soldes finaux}. En français, l'emploi de l'un ou l'autre est possible, c'est donc à votre convenance. 
+Le \indexword{pluriel du mot \og final \fg{}} \index{pluriel de final}apparaît notamment dans la page d'accueil. Vous pouvez choisir le pluriel de \og Solde final \fg{}, entre \menu{Soldes finals} (choix par défaut) et \menu{Soldes finaux}. En français, l'emploi de l'un ou l'autre est possible, c'est donc à votre convenance. 
+
 
 
 \subparagraph{Calcul des soldes :\label{setup-general-home-balance}}
@@ -661,7 +677,7 @@ Pour changer le logo, procédez comme suit :
 \vspacepdf{5mm}
 \textbf{Note} : Cette fonction est surtout intéressante pour les trésoriers d'associations (ou d'autres organisations) qui pourront ainsi imprimer des états avec leur propre logo au lieu de celui de Grisbi.
 
-\textbf{Note} : le logo de Grisbi existe en plusieurs formats, dont \gls{PNG}, et \gls{SVG}.
+\textbf{Note} : le logo de Grisbi existe en plusieurs formats, dont \gls{PNG} et \gls{SVG}.
 
 %Voir pour \gls{ICO}
 % espace après Attention ou Note  : 5 mm
@@ -768,7 +784,7 @@ Avec la case à cocher \menu{Afficher l'astuce du jour}, vous autorisez ou non  
 En (dé)cochant la case correspondante, vous pouvez autoriser ou non l'affichage des \indexword{messages d'alerte}\index{alerte !messages}\index{messages !alerte} suivants  :
 
 \begin{itemize}
-	\item \menu{Le fichier \file{nom\_de\_votre\_fichier.gsb} est déjà ouvert} ;
+	\item \menu{Le fichier \file{nom\_de\_votre\_fichier.gsb} est déjà ouvert (\emph{le nom de votre fichier de comptes est affiché automatiquement})} ;
 	\item \menu{Le fichier de comptes est lisible par tous} ;
 	\item \menu{Vous utilisez Grisbi version \emph{numéro-de-version-de-Grisbi}} ;
 	\item \menu{Le \gls{chiffrement} est irréversible} ;
@@ -813,7 +829,7 @@ Grisbi affiche en haut de sa page d'accueil, à droite de l'icône \menu{Grisbi}
 \begin{itemize}
 	\item \menu{Entité comptable} : c'est le nom du domaine de comptabilité sur lequel vous travaillez, par exemple \og Ma comptabilité \fg{} ou \og Association \fg{}, et que vous avez saisi à la création du fichier de comptes ; vous pouvez le modifier ici dans le champ \menu{Nom de l'entité comptable} ; cela peut être utile si vous gérez plusieurs \indexword{entités comptables}\index{entité comptable} ;
 	\item \menu{Titulaire du compte} : Grisbi affiche le nom du titulaire (ou du propriétaire) du dernier compte consulté ; si ce titulaire n'est pas renseigné dans les propriétés du compte, Grisbi affiche le nom de ce compte ;
-	\item \menu{Nom du fichier} : c'est le \indexword{nom du fichier}\index{fichier de comptes !nom}\index{nom !fichier de comptes} dans le répertoire courant, sous la forme \file{nom\_de\_\_votre\_fichier.gsb}, et c'est le choix par défaut.
+	\item \menu{Nom du fichier} : par défaut, c'est le \indexword{nom du fichier}\index{fichier de comptes !nom}\index{nom !fichier de comptes} dans le répertoire courant, sous la forme 	\file{nom\_de\_\_votre\_fichier.gsb}.
 \end{itemize}
 
 
@@ -879,9 +895,9 @@ Vous pouvez choisir l'\indexword{ordre d'affichage des opérations}\index{tri !o
 
 \subparagraph{Afficher une liste courte d'entrées dans la zone de sélection des tiers :\label{setup-display-third-list}}
 
-Vous pouvez cocher ou non la case \menu{Limiter le nombre de tiers dans la zone de sélection des tiers}. Cela permet de limiter la liste de tiers à ceux utilisés par les opérations non archivées VÉRIFIER SI LA CORRECTION SERA FAITE PAR PIERRE (MESSAGE DU 10/03/21 19:12). 
+Cocher la case \menu{Limiter le nombre de tiers dans la zone de sélection des tiers} permet de limiter la liste de tiers à ceux utilisés par les opérations non archivées. 
 
-En effet, lorsque vous cherchez un tiers dans le formulaire de saisie des opérations (voir la section \vref{transactions-new}, \menu{Saisie d'une nouvelle opération}), vous entrez les premières lettres de ce tiers, et une liste déroulante apparaît qui vous propose tous les tiers commençant par ces lettres ; la liste peut être très longue et la recherche du tiers peut être tout aussi longue ; cette option permet de réduire la taille de la liste déroulante, en particulier en ignorant les tiers correspondant à des opérations archivées, donc à priori anciennes. 
+En effet, lorsque vous saisissez un tiers dans le formulaire de saisie des opérations (voir la section \vref{transactions-new}, \menu{Saisie d'une nouvelle opération}), vous tapez les premières lettres de ce tiers, et une liste déroulante apparaît qui vous propose tous les tiers commençant par ces lettres ; la liste peut être très longue et la recherche du tiers peut être tout aussi longue ; cette option permet de réduire la taille de la liste déroulante, en ignorant les tiers correspondant à des opérations archivées, donc à priori anciennes. 
 Si vous cochez la case, une fenêtre s'ouvre et vous donne une explication sur le bon choix à faire, mais vous pouvez choisir ce que vous voulez.
 
 
@@ -940,13 +956,14 @@ Vous pouvez choisir le mode d'affichage des boutons de la barre d'outils\index{b
 
 \subparagraph{Raccourcis clavier :}
 
-La liste des raccourcis clavier utilise ici les libellés « Alt » et « Primary » : si la touche Alt est nommée ainsi sur tous les claviers, d'autres modificateurs ont des libellés différents en fonction du clavier ou du système ; voici les correspondances les plus courantes :
+La liste des raccourcis clavier utilise ici les libellés « Alt » et « Primary » pour les touches modificatrices : si la touche \key{ALt} est nommée ainsi sur tous les claviers, d'autres touches modificatrices ont des libellés différents en fonction du clavier ou du système ; voici les correspondances les plus courantes :
 
 \begin{itemize}
-	\item pour Windows et Linux, Primary = touche CTRL ;
-	\item pour Mac, Primary = touche Commande ou Cmd.
+	\item pour Windows et Linux, Primary = touche \key{CTRL} ;
+	\item pour Mac, Primary = touche \key{Commande} ou touche \key{Cmd}.
 \end{itemize}
 
+Sur un PC, l'outil le plus utilisé est la souris ; c'est très pratique mais une utilisation exclusive peut conduire à des troubles musculo-squelettiques (TMS) au niveau des poignets jusqu'à l'épaule, et même aux vertèbres cervicales ; utilisez donc les raccourcis clavier, qui sont très utiles et rapides, car en variant les mouvements de vos mains et de vos bras, vous gagnerez une meilleure ergonomie dans votre activité.
 
 
 \section{Opérations\label{setup-operations}}
@@ -972,7 +989,16 @@ Cet onglet permet de configurer la liste \ifIllustration des opérations\refimag
 
 Dans la liste des opérations, Grisbi vous permet d'afficher de 1 à 4 lignes pour chaque opération (voir la section \vref{transactions-list-description}). 
 
-Vous pouvez choisir le \indexword{mode d'affichage} de la liste des opérations\index{affichage !nombre de lignes}\index{affichage !modes}, c'est à dire l'\indexword{ordre des lignes} qui sont affichées pour toutes les opérations, et cela en fonction du nombre de lignes que vous voudrez afficher : pour les modes d'affichage 2 ou 3 lignes, sélectionnez, dans la liste déroulante  correspondante, l'ordre des lignes affichées. Les modes d'affichage à 1 ou 4 lignes ne peuvent  évidemment être configurés, car ils affichent soit la première ligne, soit toutes les lignes dans l'ordre 1-2-3-4.
+Vous pouvez choisir le \indexword{mode d'affichage} de la liste des opérations\index{affichage !nombre de lignes}\index{affichage !modes}, c'est à dire l'\indexword{ordre des lignes} qui sont affichées pour toutes les opérations, et cela en fonction du nombre de lignes que vous voudrez afficher : 
+\begin{itemize}
+	\item \menu{Mode d'affichage une ligne} : choisissez entre les lignes 1 à 4 ;
+	\item \menu{Mode d'affichage deux lignes} : choisissez dans la liste déroulante entre 1-2, 1-3, 1-4 ;
+	\item \menu{Mode d'affichage trois lignes} : choisissez dans la liste déroulante entre 1-2-3, 1-2-4, 1-3-4 ;
+\end{itemize}
+
+% espace pour changement de thème
+\vspacepdf{5mm}
+Le mode d'affichage 4 lignes affiche évidemment toutes les lignes dans l'ordre 1-2-3-4.
 
 VÉRIFIER LES INDEX
 
@@ -986,7 +1012,7 @@ VÉRIFIER LES INDEX
 
 Vous pouvez choisir les fonctions suivantes, à votre convenance :
 \begin{itemize}
-	\item \menu{Ouvrir l'opération sélectionnée avec un simple clic\index{affichage !opérations}} : c'est le choix par défaut ;
+	\item \menu{Ouvrir l'opération sélectionnée avec un simple clic\index{affichage !opérations}} : c'est le choix par défaut ; sinon, on l'ouvre par la touche \key{Entrée} ;
 	\item \menu{Surligner l'opération qui donne le solde à aujourd'hui}\index{solde !affichage de l'opération} : le \indexword{surlignage}\index{affichage !surlignage} permet de distinguer l'opération qui donne le solde du jour en coloriant son fond de façon spécifique ; c'est utile lorsque l'on exécute par avance des opérations futures, et c'est le choix par défaut. Cela prend effet quand on a réouvert le compte : l'opération est surlignée en vert{\couleur}.
 \end{itemize}
 
@@ -1050,7 +1076,7 @@ Vous pouvez définir le nombre et l'emplacement exact des champs des opérations
 % image centrée
 \fi
 
-\textbf{Note} : la disposition de l'affichage des champs des opérations dans la liste des opérations des comptes est totalement indépendante de celle de  l'affichage des champs dans le formulaire de saisie, qui est elle-même décrite dans la section \vref{setup-form-content}, \menu{Contenu}.
+\textbf{Note} : la disposition de l'affichage des champs des opérations dans la liste des opérations des comptes est \textbf{totalement indépendante} de celle de  l'affichage des champs dans le formulaire de saisie, qui est elle-même décrite dans la section \vref{setup-form-content}, \menu{Contenu}.
 
 \ifIllustration
 \else
@@ -1061,9 +1087,9 @@ Vous pouvez définir le nombre et l'emplacement exact des champs des opérations
 
 \subparagraph{Prévisualisation de la liste des opérations :\label{setup-operations-cells-display}}
 
-Le tableau de prévisualisation représente les 7 colonnes et les lignes permettant d'afficher les \indexword{champs d'une opération}\index{champ d'information !aperçu}, qui sont affichés de la même manière, pour chaque opération, dans la liste des opérations de l'onglet \menu{Opérations} de chaque compte.
+Le tableau de prévisualisation représente les 7 colonnes et les lignes permettant d'afficher les \indexword{champs d'une opération}\index{champ d'information !aperçu} ; ces colonnes et lignes sont affichés de la même manière, pour chaque opération, dans la liste des opérations de l'onglet \menu{Opérations} de chaque compte.
 
-Ce tableau comprend donc aussi sept colonnes et quatre lignes, qui définissent 28 \indexword{cellules}\index{cellule !définition}, pouvant donc afficher au maximum 28 champs (voir la section \vref{transactions-list-fields}, \menu{Champs d'information et de saisie}.). Vous pouvez modifier la \indexword{largeur des colonnes}\index{colonne !largeur} en cliquant, dans la ligne des libellés des colonnes, sur le séparateur entre deux d'entre-elles (sans relâcher) et en le déplaçant avec la souris.
+Ce tableau comprend donc sept colonnes et quatre lignes, qui définissent 28 \indexword{cellules}\index{cellule !définition}, pouvant donc afficher au maximum 28 champs (voir la section \vref{transactions-list-fields}, \menu{Champs d'information et de saisie}.). Vous pouvez modifier la \indexword{largeur des colonnes}\index{colonne !largeur} en cliquant, dans la ligne des libellés des colonnes, sur le séparateur entre deux d'entre-elles (sans relâcher) et en le déplaçant avec la souris.
 
 % espace avant Attention ou Note  : 5 mm
 \vspacepdf{5mm}
@@ -1161,7 +1187,7 @@ Par défaut, l'affichage de tous ces messages est validé.
 
 \subsection{Rapprochement\label{setup-operations-reconciliation}}
 
-Cet onglet permet de gérer \ifIllustration les rapprochements effectués antérieurement \refimage{setup-reconciliation-img}. 
+Cet onglet permet de gérer \ifIllustration les rapprochements effectués antérieurement \refimage{setup-reconciliation-img}, pour tous les comptes de votre fichier de comptes.
 
 % image centrée
 \begin{figure}[htb]
@@ -1172,7 +1198,7 @@ Cet onglet permet de gérer \ifIllustration les rapprochements effectués antér
 \label{setup-reconciliation-img}
 \end{figure}
 % image centrée
-\else les rapprochements effectués antérieurement.
+\else les rapprochements effectués antérieurement, pour tous les comptes de votre fichier de comptes.
 \fi
 
 Voir le chapitre \vref{reconciliation}, \menu{Rapprochement bancaire}. 
@@ -1196,7 +1222,7 @@ Pour afficher tous les rapprochements d'un ou plusieurs comptes, cliquez sur le 
 
 \textbf{Note} : ces petits triangles peuvent être remplacés, en fonction du thème de l'environnement de bureau ou du gestionnaire de fenêtres que vous utilisez, par d'autres caractères tels que +, -, >, <, etc.
 
-% espace pour changement de thème
+% pour changement de thème
 \vspacepdf{5mm}
 
 La case \menu{Tri des rapprochements par date décroissante} permet de trouver plus facilement certains rapprochements. 
@@ -1413,7 +1439,9 @@ Pour \indexword{enlever un champ} de la  prévisualisation\index{champ de saisie
 
 \subparagraph{Options communes :\label{setup-form-help-common}}
 
-Vous pouvez ou non cocher la case \menu{Remplissage sensible à la casse METTRE DANS L'INDEX ET LE GLOSSAIRE} \indexword{casse}\index{caractères !casse} des caractères ;
+Vous pouvez ou non cocher la case \menu{Remplissage sensible à la \gls{casse}} \indexword{casse}\index{caractères !casse} des caractères ;
+
+VOIR LE DOUBLEMENT DE CASSE
 
 Vous pouvez définir le \menu{Nombre minimum de caractères avant proposition dans les champs de saisie} avec les boutons \menu{+} et \menu{-} : lorsque dans un champ du formulaire de saisie vous entrez les premiers caractères d'un mot ou d'un nombre, Grisbi vous affiche une liste déroulante pour vous aider à le compléter ; cette liste apparaît quand ce nombre minimum de caractères est dépassé.
 
@@ -1499,7 +1527,7 @@ Juste en-dessous deux boutons \menu{Ajouter} et \menu{Enlever} permettent de gé
 \fi
 
 %Cette fonction n'est plus présente pour les devises de l'euro, mais devrait être possible pour les futures candidates à l'euro :
-%Vous pouvez aussi indiquer si les devises passeront à l'euro lorsque vous choisirez de basculer la tenue d'un compte dans cette monnaie (ceci est probablement obsolète pour beaucoup d'utilisateurs, mais certains peuvent en avoir encore besoin).
+%Vous pouvez aussi indiquer si les devises passeront à l'euro lorsque vous choisirez de basculer la tenue d'un compte dans cette monnaie (ceci est probablement obsolète pour beaucoup d'utilisateurs, mais certains peuvent en avoir re besoin).
 
 
 % espace pour changement de thème
@@ -1838,9 +1866,20 @@ Le bouton \menu{Associer les opérations sans exercice}\index{exercice !opérati
 
 À VÉRIFIER AVEC PIERRE
 
+%PRÉFÉRENCES FORMULAIRE DES  OPÉRATIONS À DÉFINIR XXXXXXXXXXX 
+
+%\subsection{Contenu\label{setup-form-content}}
+
+%\subparagraph{Prévisualisation de la structure du formulaire :\label{setup-form-content-display}}
+
 %Fonctionnement à vérifier ultérieurement
-La case \menu{Activer les exercices dans le formulaire de saisie d'opérations}\index{formulaire de saisie !activer un exercice}\index{exercice !activer} permet d'\indexword{activer l'affichage des exercices} dans ce formulaire, à l'endroit où vous l'aurez défini dans la section PRÉFÉRENCES FORMULAIRE DES  OPÉRATIONS À DÉFINIR XXXXXXXXXXX et ainsi d'entrer un exercice lors de la saisie des opérations. Si cela n'est pas le cas, vous devrez le faire manuellement dans le menu \menu{Édition - Préférences} (voir la section \vref{setup-form-content}, \menu{Contenu} et éventuellement la section \vref{transactions-list-fields}, \menu{Champs d'information et de saisie}).
+
+
+La case \menu{Activer les exercices dans le formulaire de saisie d'opérations}\index{formulaire de saisie !activer un exercice}\index{exercice !activer} permet d'\indexword{activer l'affichage des exercices} dans ce formulaire, à l'endroit où vous l'aurez défini dans le tableau \vref{setup-form-content-display}, \menu{Prévisualisation de la structure du formulaire}, donc ainsi de pouvoir entrer un exercice lors de la saisie des opérations. Si cela n'est pas le cas, vous devrez le faire manuellement dans le menu \menu{Édition - Préférences} (voir la section \vref{setup-form-content}, \menu{Contenu} et éventuellement la section \vref{transactions-list-fields}, \menu{Champs d'information et de saisie}).
 %Fonctionnement à vérifier ultérieurement. L'affichage devrait être automatique dans le formulaire et dans la liste des opérations
+
+ÇA NE MARCHE PAS !
+
 Vous pouvez aussi désactiver l'affichage des exercices en décochant la case \menu{Activez les exercices dans le formulaire de saisie d'opérations}.
 S'il est désactivé, et si vous rappelez, dans le formulaire de saisie des opérations, une opération dont l'exercice n'est plus affiché, la mention \menu{Automatique} apparaîtra à la place du libellé de l'exercice.
 
@@ -1887,10 +1926,12 @@ Le tableau affiche la liste de tous vos comptes dans l'ordre où ils sont affich
 
 \textbf{Note} : ces triangles peuvent être remplacés, en fonction du thème de l'environnement de bureau ou du gestionnaire de fenêtres que vous utilisez, par d'autres caractères tels que +, -, >, <, etc.
 
-Juste en-dessous trois boutons \menu{Ajouter}, \menu{Enlever} et  \menu{Tout regrouper} permettent de gérer ce tableau.
-
 % espace pour changement de thème
 \vspacepdf{5mm}
+
+Juste en-dessous trois boutons \menu{Ajouter}, \menu{Enlever} et  \menu{Tout regrouper} permettent de gérer ce tableau.
+
+
 
 
 
@@ -1900,10 +1941,11 @@ Ces modes de règlement sont les suivants :
 \begin{itemize}
 	\item \menu{Débit} ;
 	\item \menu{Crédit} ;
-	\item \menu{Virement} : un virement peut être entrant ou sortant. Ce mode doit donc être proposé tant au débit qu'au crédit. Grisbi considère par défaut qu'il est neutre (un mode neutre est un mode de règlement qui peut être indifféremment un débit ou un crédit).
+	\item \menu{Virement} : un virement peut être entrant ou sortant. Ce mode doit donc être proposé tant au débit qu'au crédit ; Grisbi considère par défaut qu'il est neutre (un mode neutre est un mode de règlement qui peut être indifféremment un débit ou un crédit).
 \end{itemize}
 
-Ces modes de règlement dépendent du type de compte : compte de caisse, bancaire, de passif, etc.(voir la sectionXXXXXXXXXX) ; par exemple, un compte de caisse n'a pas le virement comme mode de règlement.
+Ces modes de règlement dépendent du type de compte : compte de caisse, bancaire, de passif, etc.
+(voir la section \vref{accounts-type}, \menu{Types de compte de Grisbi} ; par exemple, un compte de caisse n'a pas le virement comme mode de règlement.
 
 % espace pour changement de thème
 \vspacepdf{5mm}
@@ -1997,6 +2039,7 @@ Vous pouvez choisir le \menu{Début de la période} servant de référence pour 
 % espace après Attention ou Note  : 5 mm
 \vspacepdf{5mm}
 
+
 \subparagraph{Option pour les comptes de caisse :\label{setup-budget-general-cash}}
 
 Vous pouvez aussi choisir si les \indexword{comptes de caisse}\index{prévision !comptes de caisse} pourront aussi avoir leur tableau de \indexword{prévisions}, en cochant la case \menu{Ajouter le tableau des prévisions aux comptes de caisse}.
@@ -2078,6 +2121,7 @@ Pour les comptes de passif, une case à cocher et une seule section supplémenta
 % image centrée
 \fi
 
+TABLEAU D'AMORTISSEMENTS : NOUVEAU, VOIR PIERRE :
 De plus, dans le pavé des détails du compte concerné (voir la section     ), un nouvel onglet \menu{Tableau d'amortissement} s'est ajouté entre les deux autres onglets \menu{Opérations} et \menu{Propriétés}.
 
 % espace pour changement de thème
@@ -2094,7 +2138,7 @@ Pour configurer les prévisions de ce compte, procédez comme suit :
 			 \item \menu{Frais par échéance} : en valeur absolue ;
 			 \item \menu{Type du taux} : \menu{Taux actuariel} (c'est le choix par défaut) ou \menu{Taux proportionnel} ;
 			 \item \menu{Date de la première échéance} ;
-			 \item la case \menu{La première échéance est différente des autres} ************* ;
+			 \item la case \menu{La première échéance est différente des autres} *************ÀÀÀÀ VOIR ;
 			 \item \menu{Capital remboursé} ;
 			 \item \menu{Intérêts} ;
 			 \item \menu{Utiliser le tableau d'amortissement pour les opérations planifiées} ;
@@ -2153,7 +2197,7 @@ Pour configurer les prévisions de ce compte, procédez comme suit :
 	\item dans la section \menu{Sources des données historiques} :
 		\begin{enumerate}	
 			\item définissez l'origine des \indexword{données de référence}\index{prévision !données de référence} pour établir les prévisions, grâce à l'un des deux boutons \menu{Catégories} (c'est le choix par défaut) ou \menu{Imputations budgétaires},
-			\item définissez la \indexword{période de référence}\index{prévision !période de référence} pour établir les prévisions, grâce à une liste déroulante permettant de choisir soit \menu{12 mois glissants}, soit un exercice, soit un \menu{Nouvel exercice} MAIS UN CLIC DESSUS N'AFFICHE RIEN ???? ; % leave the following line empty to make sure the left alignment of the following note
+			\item définissez la \indexword{période de référence}\index{prévision !période de référence} pour établir les prévisions, grâce à la liste déroulante, qui permet de choisir soit \menu{12 mois glissants}, soit un exercice déjà défini. % leave the following line empty to make sure the left alignment of the following note
 			
 			\vspacehevea{5mm}
 			\textbf{Note} : le choix des exercices ne s'affiche que si au moins un exercice a été défini (voir la section \vref{financialyear-start}, \menu{Mise en place des exercices}). % leave the following line empty to make sure the left alignment of the following note

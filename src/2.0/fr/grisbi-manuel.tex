@@ -12,7 +12,7 @@
 
 \usepackage{ifpdf}
 
-\usepackage[T1]{fontenc}			% the font encoding
+\usepackage[T1]{fontenc}			% the Oui Zenzla, mais tu as omis de préciser que l'adresse de
 
 \usepackage[utf8]{inputenc}			% the present input encoding
 
@@ -108,7 +108,8 @@
 %    \if@restonecol\twocolumn\fi
 %    }
 %\makeatother
-%\else
+%\else\include{grisbi-manuel-export-import}
+%\myclearemptydoublepage
 %\fi
 
 
@@ -125,21 +126,26 @@
 % Beginning of title page
 \ifIllustration
 \title{\Huge \textsc{Manuel de l'utilisateur de Grisbi}\\
+	
+% espace   : 5 mm
+\vspacepdf{15mm}	
+	
 \begin{figure}[h!]
 \begin{center}
-\includegraphics[scale=1.0]{image/manuel-logo}
+
+\includegraphics[scale=1.0]{image/manuel-grisbi.png}
+
 \end{center}
 \end{figure}}
 \else
 \title{Manuel de l'utilisateur de Grisbi}
 \fi
 
-\author{Copyright © 2001-2003 Daniel \familyname{Cartron}\\
-Copyright © 2004 Alain \familyname{Portal}\\
-Copyright © 2004 Loïc \familyname{Breilloux}\\
-Copyright © 2004 Benjamin \familyname{Drieu}\\
-Copyright © 2011-2014 Jean-Luc \familyname{Duflot}}
-
+\author{2001-2003 Daniel \familyname{Cartron}\\
+2004 Alain \familyname{Portal}\\
+2004 Loïc \familyname{Breilloux}\\
+2004 Benjamin \familyname{Drieu}\\
+2011-2021 Jean-Luc \familyname{Duflot}}
 
 \actuality{} \date{Version 2.0 du 05 juin 2021 (provisoire)}
 % End of title page
@@ -192,15 +198,13 @@ Copyright © 2011-2014 Jean-Luc \familyname{Duflot}}
 \include{grisbi-manuel-entrance}
 \myclearemptydoublepage
 
+\include{grisbi-manuel-new}
+\myclearemptydoublepage
 
-
-\include{grisbi-manuel-start}
+\include{grisbi-manuel-export-import}
 \myclearemptydoublepage
 
 \include{grisbi-manuel-home}
-\myclearemptydoublepage
-
-\include{grisbi-manuel-QIF}
 \myclearemptydoublepage
 
 \include{grisbi-manuel-datamanagement}
@@ -279,7 +283,7 @@ Copyright © 2011-2014 Jean-Luc \familyname{Duflot}}
 
 
 % Displays a note at the beginning of the glossary
-\renewcommand{\glossarypreamble}{\textbf{Note}: la plupart des définitions des entrées de ce glossaire est issue des articles du même nom de l'encyclopédie libre et collaborative \lang{Wikipédia}\footnote{\urlWikipedia{}}. Bien que ces textes aient été modifiés et adaptés au contexte particulier de ce glossaire, l'auteur remercie Wikipédia de lui avoir fourni ces références.\newline} 
+\renewcommand{\glossarypreamble}{\textbf{NOTE}: la plupart des définitions des entrées de ce glossaire est issue des articles du même nom de l'encyclopédie libre et collaborative \lang{Wikipédia}\footnote{\urlWikipedia{}}. Bien que ces textes aient été modifiés et adaptés au contexte particulier de ce glossaire, l'auteur remercie Wikipédia de lui avoir fourni ces références.\newline} 
 
 
 % Prints the glossary

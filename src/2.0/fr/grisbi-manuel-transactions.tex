@@ -50,7 +50,7 @@ La barre d'outils présente les fonctions suivantes  :
 \vspacepdf{5mm}
 Les options du menu \menu{Affichage} influent par défaut sur l'affichage de tous les comptes. Vous pouvez préférer un affichage différent pour chaque compte, cela est configurable dans le menu \menu{Édition - Préférences}  (voir le paragraphe \vref{setup-operations-list-differenciation}, \menu{Différenciation des comptes}).
  
-La \indexword{barre d'outils}\index{barre d'outils !déplacement} peut être déplacée dans l'écran en cliquant sur sa poignée (petit rectangle vertical à gauche de la barre) et en la déplaçant. Pour la réattacher à son emplacement d'origine dans le pavé des détails, la remettre en haut de la fenêtre, le haut de la poignée sur le petit trait qui visualise sa place d'origine.
+% FONCTION SUPPRIMÉE La \indexword{barre d'outils}\index{barre d'outils !déplacement} peut être déplacée dans l'écran en cliquant sur sa poignée (petit rectangle vertical à gauche de la barre) et en la déplaçant. Pour la réattacher à son emplacement d'origine dans le pavé des détails, la remettre en haut de la fenêtre, le haut de la poignée sur le petit trait qui visualise sa place d'origine.
 
 
 \section{Liste des opérations\label{transactions-list}}
@@ -291,9 +291,9 @@ Un menu contextuel est disponible sur la liste des opérations. Un clic-droit su
 	 \item \menu{Supprimer l'opération} ;
 	 \item \menu{Utiliser l'opération sélectionnée comme modèle} ;
 	 \item \menu{Cloner l'opération} ;
-	 \item \menu{Convertir l'opération en opération planifiée} : cela permet de créer
-	facilement des échéances après coup ;
+	 \item \menu{Convertir l'opération en opération planifiée} : cela permet de créer facilement des échéances après coup ;
 	 \item \menu{Déplacer l'opération vers un autre compte} ;
+	 \item \menu{Rechercher} : un montant ou une chaîne de caractères ; 
 	 \item \menu{Modifier le contenu de la cellule}.
 \end{itemize}
 
@@ -881,6 +881,33 @@ Il est bien entendu que les deux comptes doivent se trouver dans le même fichie
 % espace avant Attention ou Note  : 5 mm
 \vspacepdf{5mm}
 \textbf{Note} : il est impossible de déplacer une opération si elle a le statut \emph{Rapproché}. Par contre, c'est possible si elle a le statut \emph{Pointé}.
+
+
+
+\section{Recherche d'un montant ou d'une chaîne de caractères \label{transactions-find}}
+
+Pour rechercher un montant ou une chaîne de caractères, à partir du menu contextuel, sélectionnez \menu{Rechercher} ; une fenêtre de recherche apparaît ; dans le champ \menu{Chaîne recherchée}, entrez la chaîne de caractères voulue, que ce soit un nombre ou du texte, puis :METTRE DANS L'INDEX
+
+\begin{enumerate}
+	\item si vous avez saisi du texte, cliquez sur le bouton \menu{Chaîne recherchée}, puis ;
+	\begin{itemize}	
+		\item sélectionnez ou non \menu{Chercher dans les tiers} et \menu{Chercher dans les notes} ;
+		\item sélectionnez ou non \menu{Ignorer la \indexword{casse}\index{casse}}, pour afficher les majuscules et  les minuscules ;
+		\item sélectionnez ou non \menu{Chercher dans les opérations archivées} ;
+		\item sélectionnez ou non \menu{Chercher du plus récent au plus ancien}, pour l'ordre d'affichage des occurrences ; 
+		\item cliquez sur le bouton \menu{Rechercher} : le nombre d'occurrences trouvées s'affiche en bas de le fenêtre, et la première occurrence apparaît sur fond rose{\couleur} dans la liste des opérations, en fonction de l'ordre choisi ; cliquez sur le bouton \menu{Rechercher} pour afficher chaque occurrence suivante ; quand la dernière a été affichée, la première s'affiche à nouveau ; si le message « Aucune opération trouvée » s'affiche à là place, juste en-dessous le libellé \menu{Continuer avec un autre compte} s'affiche en caractères normaux et vous pouvez utiliser la liste déroulante \menu{Choisissez un autre compte} ;
+	\end{itemize}	
+	\item si vous avez saisi un montant, il peut être positif (crédit) ou négatif (débit), et dans ce cas il doit être signé (par ex. -17,50), cliquez sur le bouton \menu{Chercher un montant}, puis ;
+	\begin{itemize}
+		\item si vous ne sélectionnez pas \menu{Chercher un montant à + ou -}, la recherche ne donnera que des nombres strictement exacts à la chaîne recherchée (-17,50 dans notre exemple);
+		\item si vous sélectionnez \menu{Chercher un montant à + ou -}, choisissez un écart au montant exact (par exemple 5), en cliquant sur les boutons \menu{+} ou \menu{-}, et la recherche donnera tous les montants se trouvant dans l’intervalle entre -12,50 et -22,50 dans notre exemple ;
+		\item sélectionnez ou non \menu{Chercher dans les opérations archivées} ;
+		\item sélectionnez ou non \menu{Chercher du plus récent au plus ancien}, pour l'ordre d'affichage des occurrences ; 
+		\item cliquez sur le bouton \menu{Rechercher} : le nombre d'occurrences trouvées s'affiche en bas de le fenêtre, et la première occurrence apparaît sur fond rose{\couleur} dans la liste des opérations, en fonction de l'ordre choisi ; cliquez sur le bouton \menu{Rechercher} pour afficher chaque occurrence suivante ; quand la dernière a été affichée, la première s'affiche à nouveau ;	si le message « Aucune opération trouvée » s'affiche à là place, juste en-dessous le libellé \menu{Continuer avec un autre compte} s'affiche en caractères normaux et vous pouvez utiliser la liste déroulante \menu{Choisissez un autre compte}.	
+	\end{itemize}	
+\end{enumerate}
+
+
 
 
 \section{Nouveau tiers, catégorie ou imputation budgétaire\label{transactions-fillcombo}}
